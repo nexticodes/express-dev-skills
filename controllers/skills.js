@@ -2,7 +2,8 @@ const Skill = require('../models/skill.js');
 
 module.exports = {
     index,
-    show
+    show,
+    // sort
 }
 
 function index(req,res){
@@ -16,3 +17,7 @@ function show(req,res){
         skill: Skill.getOne(req.params.id),
     });
 }
+
+// function sort(req, res){
+//     console.log("Hello World");
+// }

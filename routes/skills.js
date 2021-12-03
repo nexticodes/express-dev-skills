@@ -8,4 +8,7 @@ router.get('/', skillsCtrl.index);
 /* GET one skill based on id */
 router.get('/:id', skillsCtrl.show);
 
+// GET sorted skills 
+// router.get('/sort', skillsCtrl.sort);
+
 module.exports = router;
