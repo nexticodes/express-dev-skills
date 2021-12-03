@@ -1,9 +1,8 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
+const skillsCtrl = require('../controllers/skills');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+/* GET skills listing. */
+router.get('/', skillsCtrl.show);
 
 module.exports = router;
