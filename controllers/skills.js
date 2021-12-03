@@ -12,6 +12,7 @@ function index(req,res){
 }
 
 function show(req,res){
-    let skill = Skill.getOne(req.params.id);
-    res.render('skills/skill', skill);
+    res.render('skills/show', {
+        skill: Skill.getOne(req.params.id),
+    });
 }
