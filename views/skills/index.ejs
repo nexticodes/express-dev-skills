@@ -3,7 +3,9 @@
     <ul>
         <% skills.forEach(s => { %>
             <li>
-                <%= s.skill %>
+                <a href="/skills/<%=s.id%>">
+                    <%= s.skill %>
+                </a>
             </li>
         <% }); %>
     </ul>
