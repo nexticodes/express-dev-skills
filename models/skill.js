@@ -1,7 +1,8 @@
 module.exports = {
     getAll,
     getOne,
-    sortByProficiency
+    sortByProficiency,
+    add
 }
 
 const skills = [
@@ -99,6 +100,12 @@ function getAll() {
 
 function getOne(id) {
     return skills.find(s => s.id == id);
+}
+
+function add(skill){
+    skill.id = skills.length + 1;
+    skill.relearn = (skill.proficiency < 3);
+    skills.push(skill); 
 }
 
 function sortByProficiency() {
