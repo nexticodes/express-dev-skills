@@ -7,6 +7,9 @@
                 <a href="/skills/<%=s.id%>">
                     <%= s.skill %>
                 </a>
+                <form action="/skills/<%= s.id %>?_method=DELETE" method="POST">
+                    <button type="submit" class="btn btn-danger">X</button>
+                </form>
             </li>
             <% }); %>
 
