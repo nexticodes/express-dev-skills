@@ -5,6 +5,7 @@ module.exports = {
     show,
     // sort
     new: newSkill,
+    create
 }
 
 function index(req,res){
@@ -22,6 +23,11 @@ function show(req,res){
 function newSkill(req,res){
     res.render('skills/new');
 };
+
+function create(req,res){
+    Skill.add(req.body);
+    res.redirect('/skills');
+}
 
 // function sort(req, res){
 //     console.log("Hello World");
