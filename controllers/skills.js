@@ -5,7 +5,8 @@ module.exports = {
     show,
     // sort
     new: newSkill,
-    create
+    create,
+    delete: remove
 }
 
 function index(req,res){
@@ -26,6 +27,11 @@ function newSkill(req,res){
 
 function create(req,res){
     Skill.add(req.body);
+    res.redirect('/skills');
+}
+
+function remove(req, res){
+    Skill.removeOne(req.params.id);
     res.redirect('/skills');
 }
 
