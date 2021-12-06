@@ -4,6 +4,7 @@ module.exports = {
     index,
     show,
     // sort
+    new: newSkill,
 }
 
 function index(req,res){
@@ -17,6 +18,10 @@ function show(req,res){
         skill: Skill.getOne(req.params.id),
     });
 }
+
+function newSkill(req,res){
+    res.render('skills/new');
+};
 
 // function sort(req, res){
 //     console.log("Hello World");
