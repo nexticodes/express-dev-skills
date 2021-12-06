@@ -5,6 +5,9 @@ const skillsCtrl = require('../controllers/skills');
 /* GET skills listing. */
 router.get('/', skillsCtrl.index);
 
+/* GET form for adding new skills */
+router.get('/new', skillsCtrl.new);
+
 /* GET one skill based on id */
 router.get('/:id', skillsCtrl.show);
 
