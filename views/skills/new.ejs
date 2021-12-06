@@ -1,11 +1,10 @@
 <%- include('./../partials/header') %>
 
 <h1>Add a Skill</h1> 
-<form>
+<form action="/skills/new" method="POST">
     <input name="skill" placeholder="Skill / Technology">
-    <input name="proficiency" placeholder="Proficiency (out of 5)">
-    <label for="relearn">Should relearn: <input name="relearn" type="checkbox" checked></label>
-    
+    <input type="number" name="proficiency" placeholder="Proficiency (out of 5)">
+    <button type="submit">Add</button>
 </form>
 
 
