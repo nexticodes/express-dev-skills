@@ -1,22 +1,25 @@
 <%- include('./../partials/header') %>
 
     <h1>Here is a list of my skills. Click one to learn more about it.</h1>
-    <ul>
+    <table>
         <% skills.forEach(s=> { %>
-            <li>
+        <tr>
+            <td>
                 <a href="/skills/<%=s.id%>">
                     <%= s.skill %>
                 </a>
+            </td>
+            <td>
                 <form action="/skills/<%= s.id %>?_method=DELETE" method="POST">
                     <button type="submit" class="btn btn-danger">X</button>
                 </form>
-            </li>
-            <% }); %>
-
-    </ul>
+            </td>
+        </tr>
+        <% }); %>
+    </table>
     <form action="/skills/new" method="GET">
         <button type="submit">Add a Skill</button>
         <a href="/">Homepage</a>
     </form>
 
-<%- include('./../partials/footer') %>
+    <%- include('./../partials/footer') %>
