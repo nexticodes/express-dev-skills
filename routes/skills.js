@@ -11,6 +11,9 @@ router.get('/new', skillsCtrl.new);
 /* POST new skill */
 router.post('/', skillsCtrl.create);
 
+/* DELETE a skill */
+router.delete('/:id', skillsCtrl.delete);
+
 /* GET one skill based on id */
 router.get('/:id', skillsCtrl.show);
 
