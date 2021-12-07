@@ -3,7 +3,8 @@ module.exports = {
     getOne,
     sortByProficiency,
     add,
-    removeOne
+    removeOne,
+    update
 }
 
 const skills = [
@@ -112,6 +113,14 @@ function add(skill){
 function removeOne(id){
     const idx = skills.findIndex(s => s.id == id);
     skills.splice(idx, 1);
+}
+
+function update(data){
+    const {id, skill, proficiency} = data;
+    const s = getOne(id);
+    s.skill = skill;
+    s.proficiency = proficiency;
+    s.relearn = (skill.proficiency < 3);
 }
 
 function sortByProficiency() {
