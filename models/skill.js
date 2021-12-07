@@ -120,7 +120,7 @@ function update(data){
     const s = getOne(id);
     s.skill = skill;
     s.proficiency = proficiency;
-    s.relearn = (skill.proficiency < 3);
+    s.relearn = proficiency < 3;
 }
 
 function sortByProficiency() {
