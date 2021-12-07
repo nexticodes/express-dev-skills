@@ -11,8 +11,14 @@ router.get('/new', skillsCtrl.new);
 /* POST new skill */
 router.post('/', skillsCtrl.create);
 
+/* PUT / UPDATE skill */
+router.put('/:id', skillsCtrl.update);
+
 /* DELETE a skill */
 router.delete('/:id', skillsCtrl.delete);
+
+/* GET update form for a skill */
+router.get('/:id/edit', skillsCtrl.edit);
 
 /* GET one skill based on id */
 router.get('/:id', skillsCtrl.show);
